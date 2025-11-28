@@ -120,3 +120,10 @@ export interface FuelWidgetSettings extends BaseWidgetSettings {
     background: { opacity: number };
   };
 }
+
+export interface LapMarkerWidgetSettings extends BaseWidgetSettings {
+  config: {
+    background: { opacity: number };
+    showOnlyWhenOnTrack: boolean;
+  };
+}

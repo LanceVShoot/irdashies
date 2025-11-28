@@ -115,6 +115,14 @@ class Taskbar {
     globalShortcut.register('F7', () => {
       this.saveTelemetry();
     });
+    globalShortcut.register('F8', () => {
+      this.saveLap();
+    });
+  }
+
+  private saveLap(): void {
+    // Send IPC message to all overlay windows to trigger lap saving
+    this.overlayManager.publishMessage('save-lap', null);
   }
 }
 
